@@ -1,0 +1,46 @@
+﻿<Window x:Class="p1.Windows.winUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:p1.Windows"
+ Title="winUser" Height="450" Width="800"
+        WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <StackPanel.Background>
+                <ImageBrush ImageSource="D:\AutoMex\AutoMex\Resources\JpgPhoto\1620702247_4-phonoteka_org-p-fon-dlya-deteilinga-7.jpg"/>
+            </StackPanel.Background>
+            <Menu VerticalAlignment="Top" Height="20">
+                <MenuItem Header="Tables" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold" Background="White">>
+                    <MenuItem Header="Клиент" Click="MenuItem_Click" ></MenuItem>
+                    <MenuItem Header="Сотрудник" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Продукт" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Поставщик" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Услуга" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Чек" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Гендер" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Должность" Click="MenuItem_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Statistic" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold" Background="White">Click="MenuItem_Click"></MenuItem>
+            </Menu>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 25 0 0">
+            <Label x:Name="lbTIme"></Label>
+            <Label x:Name="lbDate"></Label>
+        </StackPanel>
+
+        <Frame HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Name="Frame"
+               NavigationUIVisibility="Hidden"></Frame>
+
+        <Button Content="Выход" 
+                Background="White"
+                VerticalAlignment="Top" 
+                FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"
+                HorizontalAlignment="Right" 
+                Click="Button_Click_3"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="p1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:p1"
+             StartupUri="Windows/winAuth.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

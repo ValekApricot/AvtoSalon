@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d87585d74abe4dee9fb4d151d0eb90cb" Name="Diagram1">
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Client" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Employee" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.EmployeeService" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Gender" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Log" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Position" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Product" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.ProductService" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Provider" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Service" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.Voucher" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.VoucherProduct" Width="1.5" PointX="7.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SychevAvtoShouModel.VoucherService" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__Client__IDGender__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__Voucher__IDClien__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__Employee__IDGend__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__Employee__IDPosi__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__EmployeeS__IDEmp__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__Voucher__IDEmplo__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__EmployeeS__IDSer__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__Product__IDProvi__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__ProductSe__IDPro__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__VoucherPr__IDPro__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__ProductSe__IDSer__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__VoucherSe__IDSer__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__VoucherPr__IDVou__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="SychevAvtoShouModel.FK__VoucherSe__IDVou__628FA481" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,48 @@
+﻿<Page x:Class="p1.Pages.PgGender"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:p1.Pages"
+      mc:Ignorable="d" 
+d:DesignHeight="450" d:DesignWidth="800"
+      Title="PgGender">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\p1\p1\Resourses\JPGPhoto\shutterstock_1255216.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <Label Content="Genders" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Margin="0 0 15 0"></Label>
+            <Label Content="Search:" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White"></Label>
+            <TextBox x:Name="tbSearch" Width="200"></TextBox>
+            <Label Content="In:"></Label>
+            <ComboBox x:Name="CB" 
+                      Width="200" 
+                      HorizontalAlignment="Left" 
+                      SelectionChanged="CB_SelectionChanged">
+                <ComboBoxItem Content="ID"></ComboBoxItem>
+                <ComboBoxItem Content="Name"></ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="btnAll" FontStyle="Italic"
+                   FontFamily="Times New Roman" Background="White"  Margin ="20 0 0 0" Content="All entries" Click="btnAll_Click"></Button>
+        </WrapPanel>
+
+        <DataGrid x:Name="DG" 
+                  AutoGenerateColumns="False"
+                  Grid.Row="1"
+                  SelectionChanged="DG_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IDGender}"/>
+                <DataGridTextColumn Header="Gender" Binding="{Binding Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

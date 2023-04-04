@@ -1,0 +1,90 @@
+﻿<Page x:Class="p1.Pages.pgClient"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:p1.Pages"
+      mc:Ignorable="d" 
+ d:DesignHeight="300" d:DesignWidth="800"
+      Title="pgClient">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\p1\p1\Resourses\JPGPhoto\shutterstock_1255216.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.ColumnSpan="3">
+            <Label Content="Clients" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Margin="0 0 15 0"></Label>
+            <Label Content="Search:" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White"></Label>
+            <TextBox x:Name="tbSearch" Width="200"></TextBox>
+            <Label Content="In:"></Label>
+            <ComboBox x:Name="CB" SelectionChanged="CB_SelectionChanged" Width="200" HorizontalAlignment="Left">
+                <ComboBoxItem Content="ID"></ComboBoxItem>
+                <ComboBoxItem Content="First Name"></ComboBoxItem>
+                <ComboBoxItem Content="Last Name"></ComboBoxItem>
+                <ComboBoxItem Content="Patronimic"></ComboBoxItem>
+                <ComboBoxItem Content="Birthday"></ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="btnAll" FontStyle="Italic"
+                   FontFamily="Times New Roman" Background="White" Margin ="20 0 0 0" Content="All entries" Click="btnAll_Click"></Button>
+        </WrapPanel>
+
+        <CheckBox x:Name="chbGen" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbFst" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbLst" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbPtr" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbBrt" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbPhn" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbEml" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+
+        <Label Content="Gender" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="First Name" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Last Name" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Patronimic" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Birthday" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Phone" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Email" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center"></Label>
+
+        <DataGrid x:Name="DG" 
+                  AutoGenerateColumns="False" 
+                  Grid.Row="1"
+                  Grid.RowSpan="7"
+                  Grid.Column="2"
+                  SelectionChanged="DG_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IDClient}"/>
+                <DataGridTextColumn x:Name="dgtcGen" Header="Gender" Binding="{Binding Gender.Name}"/>
+                <DataGridTextColumn x:Name="dgtcFst" Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn x:Name="dgtcLst" Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn x:Name="dgtcPtr" Header="Patronimic" Binding="{Binding Patronimic}"/>
+                <DataGridTextColumn x:Name="dgtcBrt" Header="Birthday" Binding="{Binding Birthday}"/>
+                <DataGridTextColumn x:Name="dgtcPhn" Header="Phone" Binding="{Binding Phone}"/>
+                <DataGridTextColumn x:Name="dgtcEml" Header="Email" Binding="{Binding Email}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

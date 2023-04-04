@@ -1,0 +1,81 @@
+﻿<Page x:Class="p1.Pages.pgLogs"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:p1.Pages"
+      mc:Ignorable="d" 
+d:DesignHeight="450" d:DesignWidth="800"
+      Title="pgLogs">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\p1\p1\Resourses\JPGPhoto\shutterstock_1255216.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <Label Content="Logs" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Margin="0 0 15 0"></Label>
+            <Label Content="Search:" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White"></Label>
+            <TextBox x:Name="tbSearch" Width="200"></TextBox>
+            <Label Content="In:"></Label>
+            <ComboBox x:Name="CB" Width="200" HorizontalAlignment="Left" SelectionChanged="CB_SelectionChanged">
+                <ComboBoxItem Content="ID"></ComboBoxItem>
+                <ComboBoxItem Content="Login"></ComboBoxItem>
+                <ComboBoxItem Content="Time in System"></ComboBoxItem>
+                <ComboBoxItem Content="Entry Time"></ComboBoxItem>
+                <ComboBoxItem Content="Out Time"></ComboBoxItem>
+                <ComboBoxItem Content="Logout Reason"></ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="btnAll" FontStyle="Italic"
+                   FontFamily="Times New Roman" Background="White" Margin ="20 0 0 0" Content="All entries" Click="btnAll_Click"></Button>
+        </WrapPanel>
+
+        <CheckBox x:Name="chbLog" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbTIS" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbEtT" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbOtT" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbLtR" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+
+        <Label Content="Login" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Time in System" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Entry Time" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Out Time" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Logout Reason" FontStyle="Italic"
+                   FontFamily="Times New Roman" Foreground="White" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"></Label>
+
+        <DataGrid x:Name="DG" 
+                  AutoGenerateColumns="False" 
+                  LoadingRow="DG_LoadingRow"
+                  Grid.Column="2"
+                  Grid.Row="1"
+                  Grid.RowSpan="5">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn x:Name="dgtcLog" Header="Login" Binding="{Binding Login}"/>
+                <DataGridTextColumn x:Name="dgtcTIS" Header="Time in System" Binding="{Binding Time}"/>
+                <DataGridTextColumn x:Name="dgtcEtT" Header="Entry Time" Binding="{Binding EntryTime}"/>
+                <DataGridTextColumn x:Name="dgtcOtT" Header="Out Time" Binding="{Binding OutTime}"/>
+                <DataGridTextColumn x:Name="dgtcLtR" Header="Logout Reason" Binding="{Binding LogoutReason}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
